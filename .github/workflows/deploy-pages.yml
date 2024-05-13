@@ -1,0 +1,35 @@
+name: Deploy Static Pages
+
+on:
+  workflow_dispatch:
+
+  push:
+    tags:
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-n-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Publish
+        id: deployment
+        uses: Kjuly/sphinx-publisher@main
+        with:
+          default_lang: en
+          lang_mappings: |-
+            en:en
+            zh-Hans:zh_CN
