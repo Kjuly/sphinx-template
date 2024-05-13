@@ -1,0 +1,14 @@
+# Mac OS
+*.DS_Store
+*~
+*.sw[po]
+.*.sw[po]
+
+# Tmp
+tmp/*
+
+# Python
+.venv
+
+# Build
+build
