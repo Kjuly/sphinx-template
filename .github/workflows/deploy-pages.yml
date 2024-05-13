@@ -29,6 +29,8 @@ jobs:
         id: deployment
         uses: Kjuly/sphinx-publisher@main
         with:
+          source_root: src
+          build_root: build
           default_lang: en
           lang_mappings: |-
             en:en
