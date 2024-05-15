@@ -5,6 +5,9 @@ Sphinx docs template, including automated deployment workflows.
 
 Default folder structure in this template:
 ```sh
+_static/     # Host shared css, image files.
+_templates/  # Host template files.
+
 source/
     _conf.py  # Shared base config file.
 

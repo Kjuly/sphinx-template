@@ -23,7 +23,7 @@ extensions = [
   "sphinx_design",
 ]
 
-templates_path = ['_templates']
+templates_path = ['../../_templates']
 exclude_patterns = [
   ".DS_Store",
 ]
@@ -33,7 +33,7 @@ exclude_patterns = [
 
 html_title = "Sphinx Template"
 html_theme = 'furo'
-html_static_path = ['_static']
+html_static_path = ['../../_static']
 
 html_css_files = [
   "css/custom.css",
