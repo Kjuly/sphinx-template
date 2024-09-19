@@ -10,6 +10,7 @@ _templates/  # Host template files.
 
 source/
     _conf.py  # Shared base config file.
+    requirements.txt # Optionally, you can install extra dependencies by adding this file with libs listed.
 
     en/
         _conf.py  # Override config file for "en".
